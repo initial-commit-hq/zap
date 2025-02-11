@@ -7,6 +7,8 @@
 _obj
 _test
 vendor
+.idea
+.vscode
 
 # Architecture specific extensions/prefixes
 *.[568vq]

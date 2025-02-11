@@ -435,6 +435,7 @@ func TestLoggerLeveledMethods(t *testing.T) {
 			method        func(string, ...Field)
 			expectedLevel zapcore.Level
 		}{
+			{logger.Trace, TraceLevel},
 			{logger.Debug, DebugLevel},
 			{logger.Info, InfoLevel},
 			{logger.Warn, WarnLevel},
@@ -458,6 +459,7 @@ func TestLoggerLeveledMethods(t *testing.T) {
 func TestLoggerLogLevels(t *testing.T) {
 	withLogger(t, DebugLevel, nil, func(logger *Logger, logs *observer.ObservedLogs) {
 		levels := []zapcore.Level{
+			TraceLevel,
 			DebugLevel,
 			InfoLevel,
 			WarnLevel,

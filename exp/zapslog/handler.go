@@ -124,6 +124,8 @@ func convertSlogLevel(l slog.Level) zapcore.Level {
 		return zapcore.WarnLevel
 	case l >= slog.LevelInfo:
 		return zapcore.InfoLevel
+	case l >= slog.LevelDebug:
+		return zapcore.TraceLevel
 	default:
 		return zapcore.DebugLevel
 	}

@@ -56,6 +56,22 @@ func (f optionFunc) apply(log *Logger) {
 	f(log)
 }
 
+// WithTrace configures a Logger to print at zap's TraceLevel instead of
+// InfoLevel.
+// It only affects the Printf, Println and Print methods, which are only used in the gRPC v1 grpclog.Logger API.
+//
+// Deprecated: use grpclog.SetLoggerV2() for v2 API.
+func WithTrace() Option {
+	return optionFunc(func(logger *Logger) {
+		logger.print = &printer{
+			enab:   logger.levelEnabler,
+			level:  zapcore.TraceLevel,
+			print:  logger.delegate.Debug,
+			printf: logger.delegate.Debugf,
+		}
+	})
+}
+
 // WithDebug configures a Logger to print at zap's DebugLevel instead of
 // InfoLevel.
 // It only affects the Printf, Println and Print methods, which are only used in the gRPC v1 grpclog.Logger API.
