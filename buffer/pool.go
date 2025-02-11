@@ -21,7 +21,7 @@
 package buffer
 
 import (
-	"go.uber.org/zap/internal/pool"
+	"github.com/initial-commit-hq/zap/internal/pool"
 )
 
 // A Pool is a type-safe wrapper around a sync.Pool.

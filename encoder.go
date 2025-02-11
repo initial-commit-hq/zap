@@ -25,7 +25,7 @@ import (
 	"fmt"
 	"sync"
 
-	"go.uber.org/zap/zapcore"
+	"github.com/initial-commit-hq/zap/zapcore"
 )
 
 var (

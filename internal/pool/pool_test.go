@@ -25,8 +25,8 @@ import (
 	"sync"
 	"testing"
 
+	"github.com/initial-commit-hq/zap/internal/pool"
 	"github.com/stretchr/testify/require"
-	"go.uber.org/zap/internal/pool"
 )
 
 type pooledValue[T any] struct {

@@ -1,10 +1,11 @@
-module go.uber.org/zap/exp
+module github.com/initial-commit-hq/zap/exp
 
 go 1.19
 
 require (
 	github.com/stretchr/testify v1.8.1
-	go.uber.org/zap v1.26.0
+	go.uber.org/zap v1.27.0
+	go.uber.org/zap/exp v0.3.0
 )
 
 require (
@@ -14,4 +15,4 @@ require (
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
 
-replace go.uber.org/zap => ../
+replace github.com/initial-commit-hq/zap => ../

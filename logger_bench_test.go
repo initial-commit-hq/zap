@@ -28,8 +28,8 @@ import (
 	"testing"
 	"time"
 
-	"go.uber.org/zap/internal/ztest"
-	"go.uber.org/zap/zapcore"
+	"github.com/initial-commit-hq/zap/internal/ztest"
+	"github.com/initial-commit-hq/zap/zapcore"
 )
 
 type user struct {

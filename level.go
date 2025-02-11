@@ -21,10 +21,10 @@
 package zap
 
 import (
-	"sync/atomic"
+	"github.com/initial-commit-hq/zap/internal"
+	"github.com/initial-commit-hq/zap/zapcore"
 
-	"go.uber.org/zap/internal"
-	"go.uber.org/zap/zapcore"
+	"sync/atomic"
 )
 
 const (
